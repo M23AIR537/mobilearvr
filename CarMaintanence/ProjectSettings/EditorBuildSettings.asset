@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Air Filter.unity
+    guid: 8971f59fa89081f459175df269308737
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4eb56ee3ef1e0ef49b9bded38e9936ec, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
