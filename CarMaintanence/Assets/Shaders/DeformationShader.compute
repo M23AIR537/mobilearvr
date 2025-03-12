@@ -1,0 +1,57 @@
+struct VertexData
+{
+    float3 position;
+    float3 velocity;
+    float3 normal;
+};
+
+RWStructuredBuffer<VertexData> vertices;
+RWStructuredBuffer<int> triangles;
+
+cbuffer Params
+{
+    float inflationForce;
+    float elasticity;
+    float damping;
+    int vertexCount;
+    int triangleCount; // Declare this as a uniform (set from C#)
+
+};
+
+[numthreads(64, 1, 1)]
+void CSMain(uint id : SV_DispatchThreadID)
+{
+    if (id >= vertexCount)
+        return;
+
+    VertexData v = vertices[id];
+
+    // Apply inflation/deflation force
+    v.velocity += v.normal * inflationForce;
+    
+    // Apply positional constraint for smooth deformation
+    float3 avgNeighborPos = 0;
+    int neighborCount = 0;
+    for (int i = 0; i < triangleCount; i++) // Use triangleCount instead of triangles.Length
+
+    {
+        if (triangles[i] == id || triangles[i + 1] == id || triangles[i + 2] == id)
+        {
+            avgNeighborPos += vertices[triangles[i]].position;
+            avgNeighborPos += vertices[triangles[i + 1]].position;
+            avgNeighborPos += vertices[triangles[i + 2]].position;
+            neighborCount += 3;
+        }
+    }
+    if (neighborCount > 0)
+    {
+        avgNeighborPos /= neighborCount;
+        v.position = lerp(v.position, avgNeighborPos, elasticity);
+    }
+    
+    // Apply damping to velocity
+    v.velocity *= damping;
+    v.position += v.velocity;
+    
+    vertices[id] = v;
+}
