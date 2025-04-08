@@ -3,7 +3,27 @@ guid: e06a2be40e1ad20438352fc340c1280f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Base
+    second: {fileID: 2100000, guid: 679de0547ca24e549b595b2928720a8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - LABEL
+    second: {fileID: 2100000, guid: b3ecda61f99bcba40886d0a6ff3ad6c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - GLASS
+    second: {fileID: 2100000, guid: 7b680540a7d254745a1fa60b67f01068, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 - DIAL
+    second: {fileID: 2100000, guid: 8e825a649183c76488d70aa88631703f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -30,7 +50,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -69,7 +89,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

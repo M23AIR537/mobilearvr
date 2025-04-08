@@ -3,7 +3,42 @@ guid: b52f5a73ca2cac04480d76c685d5d2e4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 9d6a36540ed296e41a15401ca1f57002, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: alm
+    second: {fileID: 2100000, guid: b6ebdd57aefa03849937bb7a5e05f5e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black dof
+    second: {fileID: 2100000, guid: e855726a3a2c0894c966953b9680cd6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrom
+    second: {fileID: 2100000, guid: d7f9e90173d8c174daa6f5197f4b92a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle bar
+    second: {fileID: 2100000, guid: 85601131846681c418fefc3edeed1b14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tank
+    second: {fileID: 2100000, guid: 4934b6b7870863144beea4368b4b7aa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tank1
+    second: {fileID: 2100000, guid: 30058fd62a5d8344e847948feeed02fc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
